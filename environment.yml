@@ -1,0 +1,7 @@
+name: l3-demo
+channels:
+  - conda-forge
+dependencies:
+  - copier
+  - hatch
+  - hatchling
