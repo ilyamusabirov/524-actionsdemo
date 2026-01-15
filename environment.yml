@@ -5,3 +5,6 @@ dependencies:
   - copier
   - hatch
   - hatchling
+  - pytest
+  - hypothesis
+  - faker

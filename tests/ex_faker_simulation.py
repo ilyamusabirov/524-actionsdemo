@@ -26,9 +26,9 @@ def test_warmth_never_negative_fuzzing():
     fake = Faker()
     Faker.seed(42)  # For reproducibility
     
-    for _ in range(100):
+    for _ in range(10000):
         # Generate random weather conditions
-        temp = fake.random.uniform(-50, 30)
+        temp = fake.random.uniform(-275, 30)
         wind = fake.random.uniform(0, 100)
         waiting = fake.random.choice([True, False])
         

@@ -37,7 +37,7 @@ def test_wind_increases_warmth_monotonically(temp, wind1, wind2, waiting):
     score1 = calculate_warmth_score(temp_celsius=temp, wind_speed_kmh=wind1, is_waiting_for_bus=waiting)
     score2 = calculate_warmth_score(temp_celsius=temp, wind_speed_kmh=wind2, is_waiting_for_bus=waiting)
     
-    assert score2 >= score1, (
+    assert score2 > score1, (
         f"Warmth score should not decrease as wind increases! "
         f"At temp={temp:.1f}°C, wind {wind1:.1f}→{wind2:.1f} km/h: score went from {score1} to {score2}"
     )
