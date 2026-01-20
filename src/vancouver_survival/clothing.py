@@ -60,6 +60,6 @@ def calculate_warmth_score(temp_celsius, wind_speed_kmh, is_waiting_for_bus):
 def _bus_penalty(is_waiting_for_bus):
     # One physical line, two possible paths: 
     # line coverage marks it covered,
-    # branch coverage can still report the untaken path.
+    # branch coverage correctly reports the untaken path.
     if is_waiting_for_bus: return 2
     else: return 0

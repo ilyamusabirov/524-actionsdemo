@@ -1,0 +1,39 @@
+# clothing.calculate_warmth_score { #vancouver_survival.clothing.calculate_warmth_score }
+
+```python
+clothing.calculate_warmth_score(
+    temp_celsius,
+    wind_speed_kmh,
+    is_waiting_for_bus,
+)
+```
+
+Calculate a warmth score to determine appropriate clothing for Vancouver campus commute.
+
+The score increases with colder conditions, accounting for temperature, wind chill,
+and whether you're stationary or moving. Higher scores indicate colder perceived
+conditions requiring more insulation.
+
+## Parameters {.doc-section .doc-section-parameters}
+
+| Name               | Type   | Description                                                                                                             | Default    |
+|--------------------|--------|-------------------------------------------------------------------------------------------------------------------------|------------|
+| temp_celsius       | float  | Temperature in Celsius. Must be >= -273.15 (absolute zero).                                                             | _required_ |
+| wind_speed_kmh     | float  | Wind speed in kilometers per hour. Must be non-negative.                                                                | _required_ |
+| is_waiting_for_bus | bool   | True if wait for a bus expected (increases warmth score by 2 because of inactivity),  False if actively walking/biking. | _required_ |
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type   | Description                                                                                                                                                                                 |
+|--------|--------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|        | float  | Warmth score indicating clothing needs, for example: + 1: T-shirt weather (>10°C after wind chill) + 3: Light jacket (0-10°C after wind chill) + 10: Arctic parka (<-20°C after wind chill) |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type       | Description                                                                                                |
+|--------|------------|------------------------------------------------------------------------------------------------------------|
+|        | ValueError | If wind_speed_kmh is negative (physics violation). If temp_celsius is below -273.15 (below absolute zero). |
+
+## Notes {.doc-section .doc-section-notes}
+
+Wind chill reduces effective temperature by 1°C per 10 km/h of wind.

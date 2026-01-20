@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Vancouver Survival"
+  navbar:
+    left:
+      - text: "Reference"
+        href: reference/index.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+
+quartodoc:
+  package: vancouver_survival
+  dir: reference
+  sections:
+    - title: Survival Tools
+      desc: Functions to help you survive in Vancouver.
+      contents:
+        - clothing.calculate_warmth_score

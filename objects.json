@@ -1,0 +1,1 @@
+{"project": "vancouver_survival", "version": "0.0.9999", "count": 1, "items": [{"name": "vancouver_survival.clothing.calculate_warmth_score", "domain": "py", "role": "function", "priority": "1", "uri": "reference/clothing.calculate_warmth_score.html#vancouver_survival.clothing.calculate_warmth_score", "dispname": "-"}]}
