@@ -49,6 +49,7 @@ Download = "https://pypi.org/project/vancouver_survival/#files"
 dev = [
     "hatch",
     "pre-commit",
+    "ruff"
 ]
 
 docs = [
