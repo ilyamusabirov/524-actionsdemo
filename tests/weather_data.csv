@@ -1,4 +1,0 @@
-temp,wind,bus,expected_score
-15,0,False,1
--30,50,True,12
-5,20,True,5

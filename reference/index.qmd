@@ -1,9 +1,0 @@
-# Function reference {.doc .doc-index}
-
-## Survival Tools
-
-Functions to help you survive in Vancouver.
-
-| | |
-| --- | --- |
-| [clothing.calculate_warmth_score](clothing.calculate_warmth_score.qmd#vancouver_survival.clothing.calculate_warmth_score) | Calculate a warmth score to determine appropriate clothing for Vancouver campus commute. |
