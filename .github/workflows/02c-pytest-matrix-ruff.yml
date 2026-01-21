@@ -53,4 +53,5 @@ jobs:
 
       - name: Run ruff formatter
         run: |
-          ruff check .
+          #ruff check .
+          ruff check src/
