@@ -52,8 +52,3 @@ from vancouver_survival.clothing import calculate_warmth_score
 score = calculate_warmth_score(temp_celsius=5, wind_speed_kmh=15, is_waiting_for_bus=True)
 print(f"Warmth Score: {score}")
 ```
-
-## Copyright
-
-- Copyright © 2026 Ilya Musabirov.
-- Free software distributed under the [MIT License](./LICENSE).
