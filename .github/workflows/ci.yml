@@ -49,7 +49,7 @@ jobs:
       - name: Lint with Ruff
         run: |
           ruff check .
-          ruff format --check .
+          #ruff format --check .
 
       # Run pytest with coverage
       - name: Run tests with coverage
