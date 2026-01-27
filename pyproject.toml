@@ -54,6 +54,7 @@ dev = [
 
 docs = [
     "quartodoc",
+    "jupyter"
 ]
 
 build = [
