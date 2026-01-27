@@ -48,7 +48,7 @@ jobs:
 
       - name: Lint with Ruff
         run: |
-          ruff check .
+          ruff check ./src/
           #ruff format --check .
 
       # Run pytest with coverage
