@@ -8,6 +8,37 @@
 
 **vancouver-survival** is a Python package designed to help you navigate the treacherous climate of Vancouver, BC. Its primary feature is the `warmth_score` calculator, which scientifically computes exactly how many layers you need based on temperature, wind speed, and the notorious "waiting for the 99 B-Line" factor.
 
+## Week 4
+
+Updated CI/CD + docs
+
+### Workflow Examples
+
+1.  **[ci.yml](./.github/workflows/ci.yml)**
+    *   **Concept**: Full CI Matrix + Coverage Reporting.
+    *   **What it does**: Runs linting and tests with coverage across OS (Ubuntu/Windows/macOS) and Python versions 3.10–3.13, then uploads coverage to Codecov.
+
+2.  **[cd.yml](./.github/workflows/cd.yml)**
+    *   **Concept**: Test + Build + TestPyPI Release.
+    *   **What it does**: Runs tests, builds the package with Hatch, and publishes to TestPyPI after a successful CI run.
+
+3.  **[docs-preview.yml](./.github/workflows/docs-preview.yml)**
+    *   **Concept**: PR Documentation Preview.
+    *   **What it does**: Builds Quarto + quartodoc docs and deploys a PR-specific preview to Netlify with a GitHub deployment status.
+
+4.  **[docs-publish.yml](./.github/workflows/docs-publish.yml)**
+    *   **Concept**: Docs Build + Publish.
+    *   **What it does**: Builds the Quarto site and publishes it to the `gh-pages` branch.
+
+5.  **[ai-docstring-detective.yml](./.github/workflows/ai-docstring-detective.yml)**
+    *   **Concept**: AI Docstring Review.
+    *   **What it does**: Uses GitHub AI inference to critique docstring clarity in PR diffs and leaves review comments.
+
+6.  **[ai-tutorial-generator.yml](./.github/workflows/ai-tutorial-generator.yml)**
+    *   **Concept**: AI Tutorial Suggestions.
+    *   **What it does**: Reads PR diffs and generates a suggested tutorial section for `tutorial.qmd`, posting it as a PR comment.
+
+
 ## Week 3
 
 This repo is used to demo **GitHub Actions demonstration** CI/CD
