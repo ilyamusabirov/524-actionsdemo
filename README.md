@@ -2,6 +2,7 @@
 
 |        |        |
 |--------|--------|
+| CI/CD  | [![CI](https://github.com/ilyamusabirov/524-actionsdemo/actions/workflows/ci.yml/badge.svg)](https://github.com/ilyamusabirov/524-actionsdemo/actions/workflows/ci.yml) [![codecov](https://codecov.io/gh/ilyamusabirov/524-actionsdemo/graph/badge.svg)](https://codecov.io/gh/ilyamusabirov/524-actionsdemo) |
 | Package | [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/) |
 | Meta   | [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md) |
 
