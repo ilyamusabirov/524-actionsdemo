@@ -62,7 +62,7 @@ jobs:
           step: start
           token: ${{ secrets.GITHUB_TOKEN }}
           env: ${{ env.RELEASE_NAME }}
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.head_ref || github.ref }}
           logs: 'https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'
 
       # Deploy the rendered site to Netlify with a PR-specific preview URL
