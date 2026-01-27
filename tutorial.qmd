@@ -1,0 +1,46 @@
+---
+title: "Survival Tutorial"
+---
+
+## The Monday Morning Commute
+
+It is 8:00 AM on a Monday in November. You look out the window of your Kitsilano apartment. It's grey. It's wet.
+
+You need to walk 15 minutes to the bus stop and wait for the R4. The weather app says it's 6°C with 25 km/h winds.
+
+**Will you freeze?** Using the `vancouver_survival` package, we can calculate strictly scientific metrics to decide your fate.
+
+### Calculating the Warmth Score
+
+Let's define the parameters of your misery.
+
+```{python}
+from vancouver_survival.clothing import calculate_warmth_score, suggest_rain_gear
+
+# Weather Conditions
+temp_c = 6.0
+wind_kmh = 25.0
+is_raining = True
+
+# The "Standing Still" Factor
+waiting_for_bus = True 
+
+score = calculate_warmth_score(temp_c, wind_kmh, waiting_for_bus)
+
+print(f"Your Survival Score is: {score}")
+```
+
+*Note: A higher score indicates a higher likelihood of regretting your life choices.*
+
+### Selecting Gear
+
+The wind is picking up. Do you risk the umbrella, or will it turn inside out immediately?
+
+```{python}
+# 90% chance of rain, 25km/h wind
+gear = suggest_rain_gear(precip_probability=90, wind_speed_kmh=wind_kmh)
+
+print(f"Recommended Strategy: {gear}")
+```
+
+Follow this advice, and you might just make it to campus dry.
