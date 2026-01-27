@@ -16,7 +16,6 @@ This demonstrates fuzzing/property-based testing using random data generation.
 Install faker with: pip install faker
 """
 
-import pytest
 from faker import Faker
 from vancouver_survival.clothing import calculate_warmth_score
 
@@ -25,19 +24,17 @@ def test_warmth_never_negative_fuzzing():
     """Test that warmth score is never negative across 100 random scenarios."""
     fake = Faker()
     Faker.seed(42)  # For reproducibility
-    
+
     for _ in range(10000):
         # Generate random weather conditions
         temp = fake.random.uniform(-275, 30)
         wind = fake.random.uniform(0, 100)
         waiting = fake.random.choice([True, False])
-        
+
         score = calculate_warmth_score(
-            temp_celsius=temp,
-            wind_speed_kmh=wind,
-            is_waiting_for_bus=waiting
+            temp_celsius=temp, wind_speed_kmh=wind, is_waiting_for_bus=waiting
         )
-        
+
         assert score >= 0, (
             f"Warmth score cannot be negative! "
             f"Got {score} for temp={temp:.1f}°C, wind={wind:.1f}km/h, waiting={waiting}"

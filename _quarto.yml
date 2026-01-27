@@ -6,6 +6,8 @@ website:
   title: "Vancouver Survival"
   navbar:
     left:
+      - text: "Tutorial"
+        href: tutorial.qmd
       - text: "Reference"
         href: reference/index.qmd
 
