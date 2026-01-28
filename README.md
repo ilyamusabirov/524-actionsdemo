@@ -1,4 +1,4 @@
-# Vancouver Survival ☔️
+# Vancouver Survival 2026
 
 |        |        |
 |--------|--------|
