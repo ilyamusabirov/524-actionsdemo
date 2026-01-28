@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -e .[docs]
+          pip install -e ".[docs]"
 
       - name: quartodoc build
         run: |
@@ -39,19 +39,10 @@ jobs:
       # Deploy to Netlify
       # =====================================================
 
-      # Create a unique name for this deployment using the PR number or safe branch name
+      # Create a unique name for this deployment using the PR number
       # This helps track which PR preview is which
       - name: Configure release name
-        run: |
-          if [ "${{ github.event_name }}" == "pull_request" ]; then
-            echo "RELEASE_NAME=pr-${{ github.event.number }}" >> $GITHUB_ENV
-            echo "DEPLOY_ALIAS=pr-${{ github.event.number }}" >> $GITHUB_ENV
-          else
-            # Clean ref name for Netlify alias (replace / with -)
-            CLEAN_REF=$(echo "${{ github.ref_name }}" | sed 's/\//-/g')
-            echo "RELEASE_NAME=manual-${CLEAN_REF}" >> $GITHUB_ENV
-            echo "DEPLOY_ALIAS=manual-${CLEAN_REF}" >> $GITHUB_ENV
-          fi
+        run: echo "RELEASE_NAME=pr-${{ github.event.number }}" >> $GITHUB_ENV
 
       # Create a deployment status on GitHub to track the deployment progress
       # This shows up in the PR's "Deployments" section
@@ -62,7 +53,7 @@ jobs:
           step: start
           token: ${{ secrets.GITHUB_TOKEN }}
           env: ${{ env.RELEASE_NAME }}
-          ref: ${{ github.head_ref || github.ref }}
+          ref: ${{ github.head_ref }}
           logs: 'https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'
 
       # Deploy the rendered site to Netlify with a PR-specific preview URL
@@ -74,7 +65,7 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
           npm install -g netlify-cli
-          netlify deploy --dir=_site/ --alias="${{ env.DEPLOY_ALIAS }}" 2>&1 | tee deploy.log
+          netlify deploy --dir=_site/ --alias="pr-${{ github.event.number }}" 2>&1 | tee deploy.log
           DEPLOY_URL=$(grep -oP 'https://[^\s]+' deploy.log | grep -E '(netlify\.app|--.*\.netlify\.app)' | head -n 1)
           echo "url=${DEPLOY_URL}" >> $GITHUB_OUTPUT
           
