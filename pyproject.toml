@@ -4,7 +4,7 @@
 
 [build-system]
 build-backend = "hatchling.build"
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 
 ################################################################################
 # Project Configuration
@@ -92,6 +92,17 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+
+###### git tag-based version bump #####
+
+[tool.hatch.version]
+source = "vcs"
+raw-options = {version_scheme = "no-guess-dev", local_scheme = "no-local-version"}
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/vancouver_survival/__version__.py"
+
 
 ######## Configure pytest for your test suite ########
 [tool.pytest.ini_options]
