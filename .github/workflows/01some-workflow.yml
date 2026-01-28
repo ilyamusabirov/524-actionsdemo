@@ -8,3 +8,8 @@ jobs:
     steps:
     - name: Placeholder step (pass)
       run: true
+
+    - name: Another step in feature branch
+      run: |
+        echo "Hello, new step"
+      
