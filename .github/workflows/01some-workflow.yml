@@ -1,0 +1,9 @@
+name: 01new-workflow-skeleton
+  workflow_dispatch:
+
+jobs:
+  build-this:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Placeholder step (pass)
+      run: true
