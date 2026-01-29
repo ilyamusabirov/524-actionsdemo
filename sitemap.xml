@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ilyamusabirov.github.io/524-actionsdemo/reference/index.html</loc>
-    <lastmod>2026-01-29T01:55:22.732Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ilyamusabirov.github.io/524-actionsdemo/CONTRIBUTING.html</loc>
-    <lastmod>2026-01-29T01:54:53.442Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ilyamusabirov.github.io/524-actionsdemo/tutorial.html</loc>
-    <lastmod>2026-01-29T01:54:53.450Z</lastmod>
+    <loc>https://ilyamusabirov.github.io/524-actionsdemo/reference/clothing.suggest_rain_gear.html</loc>
+    <lastmod>2026-01-29T03:26:09.837Z</lastmod>
   </url>
   <url>
     <loc>https://ilyamusabirov.github.io/524-actionsdemo/reference/clothing.calculate_warmth_score.html</loc>
-    <lastmod>2026-01-29T01:55:22.758Z</lastmod>
+    <lastmod>2026-01-29T03:26:09.832Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ilyamusabirov.github.io/524-actionsdemo/CONTRIBUTING.html</loc>
+    <lastmod>2026-01-29T03:25:34.654Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ilyamusabirov.github.io/524-actionsdemo/tutorial.html</loc>
+    <lastmod>2026-01-29T03:25:34.661Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ilyamusabirov.github.io/524-actionsdemo/reference/sustenance.recommend_beverage.html</loc>
+    <lastmod>2026-01-29T03:26:09.841Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ilyamusabirov.github.io/524-actionsdemo/reference/index.html</loc>
+    <lastmod>2026-01-29T03:26:09.805Z</lastmod>
   </url>
 </urlset>
