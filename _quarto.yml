@@ -24,3 +24,5 @@ quartodoc:
       desc: Functions to help you survive in Vancouver.
       contents:
         - clothing.calculate_warmth_score
+        - clothing.suggest_rain_gear
+        - sustenance.recommend_beverage
