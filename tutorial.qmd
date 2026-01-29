@@ -44,3 +44,33 @@ print(f"Recommended Strategy: {gear}")
 ```
 
 Follow this advice, and you might just make it to campus dry.
+
+### Forget Your Worries, Not Your Rain Gear
+
+Lucy was running to catch the 99 B-Line but stopped dead in her tracks when she saw the skies turn into a pre-apocalypse grey. She peeked at her umbrella helplessly but noticed the gale winds bending a nearby tree. "Should I just wear my jacket, or brave it with the umbrella?" If only Lucy had this function to make the ultimate decision in the eternal umbrella vs. jacket debate.
+
+```python
+from vancouver_survival.clothing import suggest_rain_gear
+
+# Probability of rain: 80%, Winds: 40 km/h
+decision = suggest_rain_gear(precip_probability=80, wind_speed_kmh=40)
+print(decision)  # Output: "Waterproof Jacket"
+```
+
+---
+
+### Coffee or Cocoa? A Commuter's Dilemma
+
+It's 6:30 AM, and Sam is trying to decide between a hot coffee, iced coffee, or maybe a comforting hot chocolate before heading into the damp Vancouver morning. The chill outside is getting to him, but he's also got a long commute ahead. Good thing he remembered this trusty function before making a suboptimal caffeine-related life choice!
+
+```python
+from vancouver_survival.sustenance import recommend_beverage
+from vancouver_survival.clothing import calculate_warmth_score
+
+# Determine your warmth score first
+warmth_score = calculate_warmth_score(temp_celsius=2, wind_speed_kmh=20, is_waiting_for_bus=True)
+
+# Choose your beverage wisely
+beverage = recommend_beverage(warmth_score)
+print(beverage)  # Output: "Hot Coffee"
+```
